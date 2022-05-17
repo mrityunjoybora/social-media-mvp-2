@@ -29,6 +29,11 @@ app.use("/api/post", postRoute);
 
 if (process.env.NODE_ENV === "production") {
   app.get("*", express.static(path.join(__dirname, "..", "client", "build")));
+
+  // Catch non-existent file
+  app.get("*", (req, res) =>
+    res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"))
+  );
 }
 
 module.exports = app;
