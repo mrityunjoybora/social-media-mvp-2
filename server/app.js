@@ -32,7 +32,7 @@ if (process.env.NODE_ENV === "production") {
 
   // Catch non-existent file
   app.get("*", (req, res) =>
-    res.sendFile(join(__dirname, "..", "client", "build", "index.html"))
+    res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"))
   );
 }
 
