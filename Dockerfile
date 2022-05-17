@@ -2,7 +2,7 @@ FROM node:16-slim as build
 
 WORKDIR /var/www/client
 
-COPY client/package*.json .
+COPY client/package*.json ./
 RUN npm install 
 
 COPY client .
@@ -12,7 +12,7 @@ FROM node:16-slim
 
 WORKDIR /var/www
 
-COPY package*.json .
+COPY package*.json ./
 RUN npm install 
 COPY . .
 RUN rm -rf client
