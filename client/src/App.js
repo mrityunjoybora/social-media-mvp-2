@@ -10,9 +10,12 @@ import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL = "http://localhost:4000/api";
 
-
+if (process.env.NODE_ENV === "production") {
+  axios.defaults.baseURL = "/api";
+} else {
+  axios.defaults.baseURL = "http://localhost:4000/api";
+}
 
 function App() {
   const dispatch = useDispatch();
