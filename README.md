@@ -2,7 +2,7 @@
 
 This is a social media app built with React, Node, MongoDB and TailwindCSS
 
-Use these credentias to lohin to the app:
+Use these credentias to login to the app:
 Email: john2@example.com
 Password: 123456
 
