@@ -1,4 +1,4 @@
-# Social Media App
+# Social Media App (Build in progress)
 
 This is a social media app built with React, Node, MongoDB and TailwindCSS
 
